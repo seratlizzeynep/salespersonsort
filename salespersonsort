@@ -1,0 +1,38 @@
+class SalesPersonSort {
+
+	    
+	    public static void selectionSort(SalesPerson[] salespeople) {
+	        for (int i = 0; i < salespeople.length - 1; i++) {
+	            int minIndex = i;
+	            for (int j = i + 1; j < salespeople.length; j++) {
+	                if (salespeople[j].getWeeklySales() < salespeople[minIndex].getWeeklySales()) {
+	                    minIndex = j;
+	                }
+	            }
+	            
+	            SalesPerson temp = salespeople[i];
+	            salespeople[i] = salespeople[minIndex];
+	            salespeople[minIndex] = temp;
+	        }
+	    }
+
+	    public static void main(String[] args) {
+	       
+	        SalesPerson[] salespeople = {
+	            new LanguageSchool("Serkan", 10, false),
+	            new WorkAndStudy("Emre", 11, 2),
+	            new Consultancy("Leman", 12, 1500.0),
+	            new Consultancy("Yavuz", 13, 1200.0),
+	            new LanguageSchool("Dilek", 15, true),
+	            new WorkAndStudy("Erkan", 16, 6)
+	        };
+
+	        
+	        selectionSort(salespeople);
+
+	       
+	        System.out.println("Sorted by weekly sales:");
+	        for (SalesPerson salesperson : salespeople) {
+	            salesperson.printDetails();
+	        }
+	    }
