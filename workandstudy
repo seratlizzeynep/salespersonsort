@@ -1,0 +1,14 @@
+	class WorkAndStudy extends SalesPerson {
+	 int numMonths;
+
+	 public WorkAndStudy(String name, int weeklySales, int numMonths) {
+	     super(name, weeklySales);
+	     this.numMonths = numMonths;
+	 }
+
+	 @Override
+	 public void printDetails() {
+	     System.out.println("Work And Study (Name: " + name + ", Weekly Sales: " + weeklySales +
+	                        ", Number of Months: " + numMonths + ")");
+	 }
+	
