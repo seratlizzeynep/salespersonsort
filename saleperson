@@ -1,0 +1,15 @@
+abstract class SalesPerson {
+	 String name;
+	 int weeklySales;
+
+	 public SalesPerson(String name, int weeklySales) {
+	     this.name = name;
+	     this.weeklySales = weeklySales;
+	 }
+
+	 public int getWeeklySales() {
+	     return weeklySales;
+	 }
+
+	 public abstract void printDetails();
+	}
