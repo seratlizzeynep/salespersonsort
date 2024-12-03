@@ -1,0 +1,14 @@
+	class Consultancy extends SalesPerson {
+		 double hourlyFee;
+
+		 public Consultancy(String name, int weeklySales, double hourlyFee) {
+		     super(name, weeklySales);
+		     this.hourlyFee = hourlyFee;
+		 }
+
+		 @Override
+		 public void printDetails() {
+		     System.out.println("Consultancy (Name: " + name + ", Weekly Sales: " + weeklySales +
+		                        ", Hourly Fee: " + hourlyFee + " TL)");
+		 }
+		}
