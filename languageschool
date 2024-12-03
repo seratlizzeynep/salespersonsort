@@ -1,0 +1,14 @@
+class LanguageSchool extends SalesPerson {
+		 boolean offersWorkPermit;
+
+		 public LanguageSchool(String name, int weeklySales, boolean offersWorkPermit) {
+		     super(name, weeklySales);
+		     this.offersWorkPermit = offersWorkPermit;
+		 }
+
+		 @Override
+		 public void printDetails() {
+		     System.out.println("Language School (Name: " + name + ", Weekly Sales: " + weeklySales +
+		                        ", Offers Work Permit: " + (offersWorkPermit ? "Yes" : "No") + ")");
+		 }
+		}
